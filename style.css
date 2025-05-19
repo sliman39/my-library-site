@@ -1,0 +1,133 @@
+
+body {
+    font-family: 'Tahoma', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header, footer {
+    background-color: #f4b22f;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+}
+
+.tabs-section {
+    padding: 30px;
+    text-align: center;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.tab-button {
+    background-color: #ffffff;
+    padding: 12px 25px;
+    border: 2px solid #f8c14c;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.tab-button:hover {
+    background-color: #f8c14c;
+    color: white;
+}
+
+.table-section {
+    padding: 20px 40px;
+}
+
+.hidden {
+    display: none;
+}
+
+.book-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.book-table th, .book-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.book-table th {
+    background-color: #f2f2f2;
+}
+
+.book-table a {
+    color: #f8c14c;
+    text-decoration: none;
+}
+
+.book-table a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #eee;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    color: #666;
+    margin-top: 40px;
+}
+
+
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.category-btn {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border: 2px solid #f8c14c;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 14px;
+}
+
+.category-btn:hover {
+    background-color: #f8c14c;
+    color: white;
+}

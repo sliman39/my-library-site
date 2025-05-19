@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مكتبة الكتب الرقمية</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+  <style>
+    .hidden { display: none; }
+    .category-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    footer {
+      background: #f8f9fa;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ الشريط العلوي -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-primary px-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">📚 مكتبة الكتب الرقمية</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">الرئيسية</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">حول</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">اتصل بنا</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ✅ Tabs -->
+  <section class="text-center my-4">
+    <h2>اختر نوع المحتوى</h2>
+    <div class="category-buttons">
+      <button class="btn btn-outline-primary tab-button" data-target="books-table">📘 الكتب</button>
+      <button class="btn btn-outline-primary tab-button" data-target="notes-table">📝 المذكرات</button>
+      <button class="btn btn-outline-primary tab-button" data-target="manuscripts-table">📜 المخطوطات</button>
+    </div>
+  </section>
+
+  <!-- ✅ المحتوى -->
+  <main class="container tables-container">
+
+    <!-- الكتب -->
+    <section id="books-table" class="table-section hidden">
+      <h3 class="text-center">📘 الكتب</h3>
+      <div class="category-buttons">
+        <button class="btn btn-secondary category-btn" data-category="history">تاريخ</button>
+        <button class="btn btn-secondary category-btn" data-category="math">رياضيات</button>
+        <button class="btn btn-secondary category-btn" data-category="science">علوم</button>
+        <button class="btn btn-secondary category-btn" data-category="literature">أدب</button>
+      </div>
+
+      <!-- كتب تاريخية -->
+      <div id="history" class="category-table hidden">
+        <h4>📘 كتب تاريخية</h4>
+        <div class="table-responsive">
+          <table class="table table-bordered text-center">
+            <thead class="table-light">
+              <tr><th>عنوان</th><th>المؤلف</th><th>التصنيف</th><th>تحميل</th><th>معاينة</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>الفتوحات الإسلامية</td><td>محمد الأزهري</td><td>تاريخ</td><td><a href="#">تحميل</a></td><td><a href="#">معاينة</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- رياضيات -->
+      <div id="math" class="category-table hidden">
+        <h4>📘 كتب رياضيات</h4>
+        <div class="table-responsive">
+          <table class="table table-bordered text-center">
+            <thead class="table-light">
+              <tr><th>عنوان</th><th>المؤلف</th><th>التصنيف</th><th>تحميل</th><th>معاينة</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>أساسيات الرياضيات</td><td>خالد حسن</td><td>رياضيات</td><td><a href="#">تحميل</a></td><td><a href="#">معاينة</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- علوم -->
+      <div id="science" class="category-table hidden">
+        <h4>📘 كتب علوم</h4>
+        <div class="table-responsive">
+          <table class="table table-bordered text-center">
+            <thead class="table-light">
+              <tr><th>عنوان</th><th>المؤلف</th><th>التصنيف</th><th>تحميل</th><th>معاينة</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>مبادئ الفيزياء</td><td>فاطمة نور</td><td>علوم</td><td><a href="#">تحميل</a></td><td><a href="#">معاينة</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- أدب -->
+      <div id="literature" class="category-table hidden">
+        <h4>📘 كتب أدبية</h4>
+        <div class="table-responsive">
+          <table class="table table-bordered text-center">
+            <thead class="table-light">
+              <tr><th>عنوان</th><th>المؤلف</th><th>التصنيف</th><th>تحميل</th><th>معاينة</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>ديوان المتنبي</td><td>المتنبي</td><td>أدب</td><td><a href="#">تحميل</a></td><td><a href="#">معاينة</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- المذكرات -->
+    <section id="notes-table" class="table-section hidden">
+      <h3 class="text-center">📝 المذكرات</h3>
+      <div class="table-responsive">
+        <table class="table table-bordered text-center">
+          <thead class="table-light">
+            <tr><th>عنوان</th><th>من إعداد</th><th>تحت إشراف</th><th>معاينة</th><th>تحميل</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>مذكرة الفيزياء 2024</td><td>أحمد خليل</td><td>د. سمير يوسف</td><td><a href="#">معاينة</a></td><td><a href="#">تحميل</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- المخطوطات -->
+    <section id="manuscripts-table" class="table-section hidden">
+      <h3 class="text-center">📜 المخطوطات</h3>
+      <div class="table-responsive">
+        <table class="table table-bordered text-center">
+          <thead class="table-light">
+            <tr><th>عنوان</th><th>السنة</th><th>معاينة</th><th>تحميل</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>مخطوطة تفسير</td><td>1750م</td><td><a href="#">معاينة</a></td><td><a href="#">تحميل</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ✅ التذييل -->
+  <footer>
+    <p>© 2025 مكتبة الكتب الرقمية - جميع الحقوق محفوظة</p>
+  </footer>
+
+  <!-- ✅ Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ✅ JS لتبديل الجداول -->
+  <script>
+    const tabButtons = document.querySelectorAll(".tab-button");
+    const sections = document.querySelectorAll(".table-section");
+    const categoryButtons = document.querySelectorAll(".category-btn");
+    const categoryTables = document.querySelectorAll(".category-table");
+
+    tabButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const target = button.getAttribute("data-target");
+        sections.forEach(section => section.classList.add("hidden"));
+        document.getElementById(target).classList.remove("hidden");
+      });
+    });
+
+    categoryButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const target = button.getAttribute("data-category");
+        categoryTables.forEach(table => {
+          table.classList.toggle("hidden", table.id !== target);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
